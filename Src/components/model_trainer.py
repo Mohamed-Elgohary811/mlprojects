@@ -15,10 +15,10 @@ from sklearn.neighbors import KNeighborsRegressor
 from sklearn.tree import DecisionTreeRegressor
 from xgboost import XGBRegressor
 
-from Src.exception import CustomException
-from Src.logger import logging
+from src.exception import CustomException
+from src.logger import logging
 
-from Src.utils import save_object, evaluate_models
+from src.utils import save_object, evaluate_models
 
 
 @dataclass
@@ -72,6 +72,7 @@ class ModelTrainer:
                     'n_estimators': [8, 16, 32, 64, 128, 256]
                 },
                 "Linear Regression": {},
+                
                 "K-Neighbors Classifier": {
                     'n_neighbors': [5, 7, 9, 11],
                     # 'weights': ['uniform', 'distance'],
